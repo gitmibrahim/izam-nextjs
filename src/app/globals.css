@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(245, 245, 245, 1)
+}
+
+h3 {
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+.drag-handle {
+  cursor: grab;
+}
