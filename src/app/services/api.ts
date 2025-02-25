@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-const API_BASE_URL = "http://localhost:8081";
+const API_BASE_URL = "/api";
 
 interface ApiNavItem {
   id: number;
@@ -111,7 +111,7 @@ export const navService = {
         }
       },
       {
-        maxRetries: 2, // Less retries for tracking as it's not critical
+        maxRetries: 2,
         delayMs: 500,
       }
     );
