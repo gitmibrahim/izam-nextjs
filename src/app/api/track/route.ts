@@ -16,6 +16,6 @@ export async function POST(request: Request) {
 
     return new NextResponse(null, { status: 204 });
   } catch (error) {
-    return new NextResponse(null, { status: 500 });
+    return new NextResponse(`Internal Server Error: ${error}`, { status: 500 });
   }
 }

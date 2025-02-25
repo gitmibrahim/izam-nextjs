@@ -54,7 +54,7 @@ export async function GET() {
       { id: 6, title: "Contact", target: "/contact" },
     ]);
   } catch (error) {
-    return new NextResponse(null, { status: 500 });
+    return new NextResponse(`Internal Server Error: ${error}`, { status: 500 });
   }
 }
 
@@ -73,6 +73,6 @@ export async function POST(request: Request) {
     fs.writeFileSync(navPath, JSON.stringify(items));
     return new NextResponse(null, { status: 204 });
   } catch (error) {
-    return new NextResponse(null, { status: 500 });
+    return new NextResponse(`Internal Server Error: ${error}`, { status: 500 });
   }
 }
